@@ -1,0 +1,39 @@
+@import "../../../assets/helpers/mixins";
+
+.list {
+  padding: 4px 8px;
+  background-color: $gray1;
+  min-height: 405px;
+}
+
+.bottomLine {
+  padding: 0 16px;
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.text {
+  @include bodyText();
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.result {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 20px;
+  height: 24px;
+  color: $gray1;
+  background-color: $red;
+  padding: 0 8px;
+}
+
+.succeed {
+  background-color: $green;
+}
+
+.voiting {
+  max-width: 1056px;
+}

@@ -1,0 +1,71 @@
+@import "../../../assets/helpers/mixins.scss";
+
+.wrap {
+  margin-top: 16px;
+}
+
+.company {
+  width: 100%;
+  display: flex;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 1px 2px rgba(120, 128, 144, 0.16);
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.col {
+  color: $dark;
+}
+
+.col:first-child {
+  display: flex;
+  align-items: center;
+  & > img {
+    min-width: 68px;
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+  }
+}
+
+.info {
+  margin-left: 16px;
+}
+
+.name {
+  @include subtitleSm(700);
+  display: block;
+}
+
+.address {
+  @include caption();
+  display: block;
+}
+
+.col:last-child {
+  margin-left: 50px;
+  min-height: 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.industry {
+  @include overline();
+  margin-bottom: 20px;
+  display: block;
+
+  &:only-child {
+    margin-bottom: auto;
+  }
+}
+
+.avatars {
+  display: block;
+  margin-top: auto;
+}

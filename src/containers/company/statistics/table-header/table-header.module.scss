@@ -1,0 +1,13 @@
+.thead {
+  display: grid;
+  grid-template-columns: 64px 1.3fr 1.1fr 1.1fr 1.1fr 1fr 1.03fr 0.41fr 0.41fr;
+  margin-top: 24px;
+  & > div {
+    &:first-child {
+      padding-left: 16px;
+    }
+    &:last-child {
+      padding-right: 16px;
+    }
+  }
+}

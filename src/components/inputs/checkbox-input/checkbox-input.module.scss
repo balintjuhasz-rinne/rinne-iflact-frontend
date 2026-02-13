@@ -1,0 +1,49 @@
+@import "../../../assets/helpers/mixins.scss";
+
+.wrap {
+  display: flex;
+  align-items: center;
+}
+
+.checkInput {
+  text-align: center;
+  max-height: 28px;
+  max-width: 52px;
+  margin-left: 12px;
+  margin-right: 12px;
+  input {
+    max-height: 28px;
+    max-width: 52px;
+    text-align: center;
+    background-image: none;
+    background-size: 0;
+    padding: 2px;
+  }
+}
+
+.hint {
+  @include bodyTextSm();
+}
+
+.dropdown {
+  padding: 8px 8px;
+  .input:checked {
+    & + label:before {
+      background-color: transparent;
+    }
+    & + label:after {
+      top: 5px;
+      border-color: $gray3;
+    }
+    &:focus-visible {
+      & + label {
+        color: $blue;
+      }
+    }
+  }
+  .label {
+    span {
+      margin-left: 12px;
+    }
+  }
+}

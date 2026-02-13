@@ -1,0 +1,85 @@
+@import "../../assets/helpers/mixins.scss";
+
+@mixin wrap() {
+  display: inline-flex;
+  padding: 4px;
+  position: relative;
+  box-sizing: content-box;
+  background-color: rgba(176, 181, 191, 0.2);
+}
+
+.wrapMd {
+  @include wrap();
+  border-radius: 8px;
+
+  .option {
+    height: 24px;
+  }
+  .slider {
+    height: 24px;
+  }
+}
+
+.options {
+  display: inline-flex;
+}
+
+.slider {
+  background-color: white;
+  position: absolute;
+  transition: width $speed, left $speed;
+  z-index: 0;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.option {
+  @include caption(600);
+  display: flex;
+  padding: 0 16px 0 18px;
+  align-items: center;
+  border: 0;
+  transition: color $speed;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+  outline: none;
+  color: rgba($dark, 0.6);
+  &:not(:disabled):not(:only-child) {
+    cursor: pointer;
+  }
+
+  &:not(:disabled):not(:only-child) {
+    &:hover {
+      color: rgba($dark, 0.8);
+    }
+    &:active {
+      color: rgba($dark, 0.5);
+    }
+  }
+  &:only-child {
+    padding: 0;
+    outline: none;
+  }
+
+  &:focus-visible {
+    @include focus(0, $dark, 0);
+  }
+  &.active {
+    color: $dark;
+
+    &:hover:not(:only-child) {
+      color: $dark;
+    }
+    &:active:not(:only-child) {
+      color: $dark;
+    }
+  }
+}
+
+.option.active {
+  background-color: white;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}

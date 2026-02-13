@@ -1,0 +1,44 @@
+@import "../../../assets/helpers/mixins";
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.halfWidth {
+  max-width: calc((100% - 24px) / 2);
+}
+
+.oneThirdWidth {
+  max-width: calc((100% - 48px) / 3);
+}
+
+.panel {
+  margin-top: 32px;
+  display: flex;
+  justify-content: flex-end;
+  button {
+    &:nth-child(1) {
+      transition: background-color $speed, opacity $speed;
+    }
+    &:nth-child(2) {
+      margin-left: auto;
+    }
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
+
+.errors {
+  margin-top: 8px;
+}
+
+.error {
+  @include caption();
+  padding: 2px 0;
+  color: $red;
+}

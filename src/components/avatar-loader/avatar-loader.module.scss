@@ -1,0 +1,72 @@
+@import "../../assets/helpers/mixins";
+
+.input {
+  display: none;
+}
+
+.wrap {
+  min-width: 228px;
+  width: 228px;
+  height: 228px;
+  background-color: $gray2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.initials {
+  color: #fff;
+  @include h2();
+}
+
+.panel {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+  padding: 8px;
+}
+
+.add,
+.remove {
+  cursor: pointer;
+
+  @include iconButton();
+  img {
+    width: 20px;
+  }
+}
+
+.remove {
+  margin-right: 8px;
+}
+
+.add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  @include caption();
+  padding: 2px 0;
+  color: $red;
+  position: absolute;
+  top: 100%;
+  right: 0;
+}

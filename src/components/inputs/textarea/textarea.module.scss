@@ -1,0 +1,52 @@
+@import "../../../assets/helpers/mixins";
+
+.wrap {
+  width: 100%;
+  position: relative;
+}
+
+.label {
+  @include inputLabel();
+}
+
+.textarea {
+  @include primaryInput();
+  background-position: top 12px right 10px;
+  resize: none;
+  margin-bottom: 16px;
+  &.error {
+    padding: 8px 36px 8px 12px;
+    border: 1px solid $red;
+    background-image: url("../../../../public/images/icons/error.svg");
+    background-position: calc(100% - 16px) 16px;
+  }
+
+  &.success {
+    padding: 8px 36px 8px 12px;
+    background-image: url("../../../../public/images/icons/success.svg");
+    background-position: calc(100% - 16px) 16px;
+  }
+}
+
+.md {
+  height: 140px;
+  max-height: 140px;
+}
+
+.inputError {
+  @include caption();
+  position: absolute;
+  top: calc(100% - 16px);
+  right: 0;
+  color: $red;
+  & + .hint {
+    opacity: 0;
+  }
+}
+
+.hint {
+  @include caption();
+  position: absolute;
+  top: calc(100% - 16px);
+  right: 0;
+}

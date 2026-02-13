@@ -1,0 +1,12 @@
+@mixin oddEvenChild($selector) {
+    #{$selector}:first-child:nth-last-child(3),
+    #{$selector}:first-child:nth-last-child(3) ~ #{$selector} {
+      width: calc(100% / 3);
+    }
+    
+    #{$selector}:first-child:nth-last-child(4),
+    #{$selector}:first-child:nth-last-child(4) ~ #{$selector} {
+      width: calc(100% / 4);
+    }
+  }
+  

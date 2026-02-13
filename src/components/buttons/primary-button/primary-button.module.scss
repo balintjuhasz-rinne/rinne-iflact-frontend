@@ -1,0 +1,139 @@
+@import "../../../assets/helpers/mixins";
+
+.button {
+  @include button();
+
+  &:disabled {
+    .value {
+      opacity: 0.4;
+    }
+  }
+  &.isLoading {
+    .value {
+      opacity: 0;
+    }
+  }
+}
+
+.dark {
+  @include buttonDark();
+}
+
+.orange {
+  @include buttonOrange();
+}
+
+.gray {
+  @include buttonGray();
+}
+
+.red {
+  @include buttonRed();
+}
+
+.white {
+  @include buttonWhite();
+}
+
+.green {
+  @include buttonWhite();
+  background-color: #9acd32;
+  &:hover{
+    background-color: #688d1f !important;
+  }
+}
+
+.solid-red{
+  @include buttonWhite();
+  background-color: #cd5632;
+  &:hover{
+    background-color: #9c4227 !important;
+  }
+}
+
+.transparent {
+  @include buttonGray();
+  background-color: transparent;
+  &.isLoading {
+    pointer-events: none;
+  }
+  &.warn {
+    color: $red;
+  }
+}
+
+.link {
+  @include buttonLink();
+  height: auto;
+  padding: 0;
+  background-color: transparent;
+  &:active {
+    background: transparent;
+  }
+  &.isLoading {
+    pointer-events: none;
+  }
+  &.warn {
+    color: $red;
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  & + .value {
+    opacity: 0;
+  }
+  &.gray {
+    span {
+      background-color: $gray3;
+    }
+  }
+  &.white {
+    span {
+      background-color: $blue;
+    }
+  }
+}
+
+.loaderEl {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 4px;
+
+  @for $i from 1 to 4 {
+    &:nth-of-type(#{$i}) span {
+      animation-delay: $i * 0.25s;
+    }
+  }
+
+  span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    animation: pulse 1s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

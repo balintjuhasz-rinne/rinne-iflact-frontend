@@ -1,0 +1,10 @@
+@import "../../../assets/helpers/mixins";
+
+.cosignatoriesHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  @include h5();
+}

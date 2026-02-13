@@ -1,0 +1,40 @@
+@import "../../../assets/helpers/mixins";
+
+.panel {
+  width: 260px;
+  min-width: 260px;
+  background-color: #fff;
+  max-height: calc(100vh - #{$header-height});
+}
+
+.info {
+  padding: 16px;
+  border-bottom: 1px solid rgba($gray2, 0.3);
+}
+
+.photo {
+  margin-bottom: 16px;
+}
+
+.acts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.act {
+  color: $blue;
+  background-color: transparent;
+  border: 0;
+  @include caption(600);
+  & + .act {
+    margin-top: 12px;
+  }
+}
+
+.activities {
+  padding: 24px 16px;
+  width: 100%;
+  min-width: initial;
+  max-height: calc(100vh - 357px);  
+}

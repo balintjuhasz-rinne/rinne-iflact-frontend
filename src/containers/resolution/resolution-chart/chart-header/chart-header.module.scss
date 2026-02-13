@@ -1,0 +1,28 @@
+@import '../../../../assets/helpers/mixins';
+
+.wrapper{
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  @include subtitle();
+}
+
+.checkboxes{
+  display: flex;
+}
+
+.checkboxWrap{
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.checkbox{
+  span{
+    @include caption();
+  }
+}

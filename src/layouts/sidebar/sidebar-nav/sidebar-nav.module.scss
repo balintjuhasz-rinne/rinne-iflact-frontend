@@ -1,0 +1,29 @@
+@import "../../../assets/helpers/mixins.scss";
+
+.root {
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 20px;
+}
+
+.icon {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  @include focus(4px);
+  img {
+    pointer-events: none;
+  }
+}
+
+@include max-vw($xl) {
+  .root {
+    display: flex;
+  }
+}

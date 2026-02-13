@@ -1,0 +1,17 @@
+@import "../../assets/helpers/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  margin-bottom: 12px;
+}
+
+.text {
+  @include bodyText();
+  color: $gray3;
+}

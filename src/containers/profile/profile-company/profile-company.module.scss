@@ -1,0 +1,31 @@
+@import "../../../assets/helpers/mixins.scss";
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.panel {
+  padding-top: 16px;
+  max-width: 220px;
+  margin-left: 20px;
+  margin-right: auto;
+  width: 100%;
+}
+
+.content {
+  background-color: #fff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  width: 100%;
+  padding: 16px 24px;
+  min-height: calc(100vh - 138px);
+  box-shadow: 0px 24px 32px rgba(120, 128, 144, 0.12);
+  max-width: 880px;
+}
+
+.panelTitle {
+  @include subtitle();
+  color: $dark;
+  margin-bottom: 13px;
+}

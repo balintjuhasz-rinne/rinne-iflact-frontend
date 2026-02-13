@@ -1,0 +1,25 @@
+@import "../../../assets/helpers/mixins";
+
+.wrap {
+  text-align: center;
+  max-width: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  @include bodyText();
+  margin-bottom: 32px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}

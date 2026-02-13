@@ -1,0 +1,62 @@
+@import "../../../../assets/helpers/mixins";
+
+.wrapper {
+  padding: 4px 12px;
+  display: flex;
+  min-height: 40px;
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba($gray2, 0.4);
+  }
+}
+
+@include oddEvenChild('.cell');
+
+.cell {
+  overflow-wrap: break-word;
+  &:not(:last-child) {
+    padding-right: 8px;
+  }
+}
+
+.privacy {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.initials {
+  @include bodyText(500);
+}
+
+.email {
+  @include bodyText();
+  display: flex;
+  align-items: center;
+}
+
+.comment {
+  @include bodyTextSm();
+  color: $gray3;
+  :global {
+    .anchor {
+      color: $blue;
+    }
+    .comment-text {
+      margin-top: 8px;
+    }
+  }
+}
+
+.veto {
+  position: absolute;
+  top: 0;
+  left: 22px;  
+  width: 16px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.time {
+  @include captionSm();
+  display: block;
+}

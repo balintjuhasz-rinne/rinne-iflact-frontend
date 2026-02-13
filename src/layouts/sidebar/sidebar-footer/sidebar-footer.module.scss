@@ -1,0 +1,21 @@
+@import "../../../assets/helpers/mixins.scss";
+
+.terms {
+  font-family: "inter";
+  font-style: normal;
+  margin-top: auto;
+  margin-left: 24px;
+  opacity: 0.4;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.year {
+  margin-bottom: 4px;
+}
+
+.link {
+  color: #ffffff;
+}

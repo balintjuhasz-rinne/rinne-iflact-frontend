@@ -1,0 +1,73 @@
+@import "../../../assets/helpers/mixins.scss";
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  transition: opacity $speed;
+  opacity: 0.5;
+  img {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+  }
+}
+
+.navItem {
+  padding: 7px 24px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &:before {
+    left: 0;
+    width: 2px;
+    transition: background-color $speed;
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    height: 38px;
+  }
+}
+
+.navText {
+  @include subtitleSm(700);
+  margin-left: 12px;
+  color: rgba(#fff, 0.5);
+  transition: color $speed;
+}
+
+.active {
+  &.navItem {
+    &:before {
+      background-color: $purple-light;
+    }
+  }
+  .icon {
+    opacity: 1;
+  }
+  .navText {
+    color: rgba(#fff, 1);
+  }
+}
+
+@include max-vw($xl) {
+  .navItem {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .navText {
+    display: none;
+  }
+  .on {
+    .navText {
+      display: flex;
+    }
+  }
+}

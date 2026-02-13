@@ -1,0 +1,53 @@
+@import "../../../..//assets/helpers/mixins";
+
+.link {
+  color: initial;
+  outline: none;
+  &:focus-visible {
+    .cosignatoriesListItem {
+      border: 1px dashed $dark;
+    }
+  }
+}
+
+.cosignatoriesListItem {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 40px 1.28fr 1.1fr 0.67fr 0.61fr 1.34fr;
+  transition: background-color $speed;
+  &:hover {
+    background: rgba(176, 181, 191, 0.2);
+    .avatar {
+      border: 2px solid $gray1;
+    }
+  }
+  &.inactive {
+    background: rgba(176, 181, 191, 0.2);
+    &:hover {
+      background: rgba(176, 181, 191, 0.4);
+    }
+  }
+}
+
+.itemId {
+  @include bodyTextSm();
+}
+
+.itemPersonality {
+  display: flex;
+  align-items: center;
+  @include caption(600);
+}
+
+.itemVotingPower {
+  color: $gray2;
+}
+
+.avatar {
+  margin-right: 4px;
+}
+
+.plus {
+  @include captionSm(700);
+  color: $gray3;
+}

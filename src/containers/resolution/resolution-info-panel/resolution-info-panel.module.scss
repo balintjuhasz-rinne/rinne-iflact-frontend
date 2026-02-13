@@ -1,0 +1,88 @@
+@import "../../../assets/helpers/mixins";
+
+.wrap {
+  margin-bottom: 8px;
+  width: 100%;
+  padding: 20px 24px;
+  background-color: #fff;
+}
+
+.field {
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.companyLogo {
+  margin-bottom: 12px;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.companyName {
+  @include subtitle();
+  display: block;
+}
+
+.fieldName {
+  @include overline();
+  margin-bottom: 4px;
+  color: $gray3;
+  display: block;
+}
+
+.fieldValue {
+  @include bodyText();
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.emergency {
+  margin-right: 9px;
+}
+
+.document {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  color: inherit;
+  outline: none;
+  transition: opacity $speed;
+  width: 100%;
+  &:active {
+    opacity: 0.8;
+  }
+  &:focus-visible {
+    @include focus(0, $dark, 2px);
+  }
+}
+
+.documentIcon {
+  margin-right: 8px;
+}
+
+.documentName {
+  display: block;
+  @include bodyText(500);
+}
+
+.documentSize {
+  @include captionSm(500);
+  color: $gray3;
+}
+
+.documentInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1 0 auto;
+}
+
+.link {
+  @include bodyTextSm();
+  color: $blue;
+}

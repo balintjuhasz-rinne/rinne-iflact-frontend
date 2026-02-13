@@ -1,0 +1,131 @@
+@import '../../../assets/helpers/mixins';
+
+.wrap {
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  .input {
+    min-height: 40px;
+    padding: 8px 38px 6px 12px;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.air {
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.halfWidth {
+  max-width: calc((100% - 24px) / 2);
+}
+
+.oneThirdWidth {
+  width: 100%;
+  max-width: calc((100% - 48px) / 3);
+}
+
+.panel {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  button {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
+
+.stepHint {
+  opacity: 0.5;
+  margin-right: auto;
+  @include bodyText();
+}
+
+.content {
+  background-color: $gray1;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  .item + .item {
+    margin-top: 0;
+  }
+}
+
+.item + .grid,
+.grid + .item,
+.item + .item,
+.grid + .grid {
+  margin-top: 24px;
+}
+
+.key {
+  @include overline();
+  color: $gray3;
+}
+
+.val {
+  @include subtitle(500);
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  word-break: break-word;
+  white-space: pre-line;
+}
+
+.emergency {
+  margin-right: 9px;
+}
+
+a.val {
+  color: $blue;
+}
+.itemFile {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  @include bodyTextSm(700);
+}
+
+.info {
+  margin-left: 8px;
+}
+
+.size {
+  @include caption();
+  color: $gray3;
+  margin-top: 4px;
+}
+
+.pdf {
+  width: 40px;
+}
+
+.errors {
+  margin-top: 8px;
+}
+
+.error {
+  @include caption();
+  padding: 2px 0;
+  color: $red;
+}

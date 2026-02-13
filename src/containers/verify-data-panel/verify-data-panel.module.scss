@@ -1,0 +1,104 @@
+@import "../../assets/helpers/mixins";
+
+.verifyDataPanel {
+  padding: 32px 40px;
+  background-color: $gray1;
+  box-shadow: 0px 0px 64px rgba(17, 36, 88, 0.38);
+  border-radius: 4px;
+  color: $dark;
+}
+
+.title {
+  @include h5();
+  margin-bottom: 20px;
+}
+
+.inputsRow {
+  display: flex;
+  justify-content: space-between;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+.halfWidth {
+  max-width: calc((100% - 24px) / 2);
+}
+
+.oneThirdWidth {
+  max-width: calc((100% - 48px) / 3);
+}
+
+.bottomLine {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signInBlock {
+  color: $gray3;
+}
+
+.signInLink {
+  @include link();
+}
+
+.button {
+  height: 40px;
+}
+
+.back {
+  margin-left: auto;
+  margin-right: 24px;
+}
+
+.note {
+  @include bodyText();
+  color: $gray3;
+}
+
+.list {
+  margin: 4px 0 32px;
+  background-color: #fff;
+  max-height: 327px;
+  overflow: auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  border-bottom: 1px solid $gray2;
+  margin: 0 18px 0 8px;
+  padding: 0 12px;
+  & > span {
+    width: 50%;
+  }
+}
+
+.name {
+  @include bodyText(500);
+  color: $dark;
+  & > span {
+    margin-right: 20px;
+  }
+}
+
+.positions {
+  @include bodyText();
+  color: $gray3;
+}
+
+.error {
+  @include caption();
+  position: absolute;
+  top: 104%;
+  left: 0;
+  color: $red;
+}
+
+.gdpr {
+  margin-bottom: 40px;
+  position: relative;
+}

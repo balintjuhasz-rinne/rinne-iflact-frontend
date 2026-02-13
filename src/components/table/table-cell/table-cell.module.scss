@@ -1,0 +1,14 @@
+.cell {
+  &:not(:last-child) {
+    padding-right: 5px;
+  }
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
+}
+.right {
+  text-align: right;
+  justify-content: flex-end;
+}

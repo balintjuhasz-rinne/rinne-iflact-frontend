@@ -1,0 +1,39 @@
+@import "../../assets/helpers/mixins";
+
+.wrap {
+  min-height: 445px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  .input {
+    min-height: 40px;
+    padding: 8px 38px 6px 12px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  > * {
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+  > * {
+    &:last-child {
+      margin-top: auto;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.bottomLine {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}

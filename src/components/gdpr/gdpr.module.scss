@@ -1,0 +1,19 @@
+@import "../../assets/helpers/mixins";
+
+.gdpr {
+  display: flex;
+}
+
+.checkbox {
+  margin-right: 8px;
+}
+
+.text {
+  @include bodyTextSm();
+  color: $dark;
+}
+
+.link {
+  font-weight: 500;
+  color: $blue;
+}

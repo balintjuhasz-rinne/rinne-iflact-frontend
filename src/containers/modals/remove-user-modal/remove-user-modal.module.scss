@@ -1,0 +1,27 @@
+@import "../../../assets/helpers/mixins";
+
+.removeModal {
+  text-align: center;
+  max-width: 422px;
+  h5 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.text {
+  @include bodyText();
+  margin-bottom: 32px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}

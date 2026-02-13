@@ -1,0 +1,51 @@
+@import "../../../..//assets/helpers/mixins";
+
+.row {
+  display: grid;
+  align-items: center;
+  grid-template-columns: .8fr .7fr 0.9fr 1.5fr 1.5fr;
+  transition: background-color $speed;
+  color: $dark;
+  outline: none;
+  cursor: pointer;
+  & > div {
+    &:first-child {
+      margin-left: 16px;
+    }
+    &:last-child {
+      margin-right: 16px;
+    }
+  }
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+  span {
+    @include cutText();
+    padding-right: 40px;
+  }
+}
+
+.cellLast {
+  display: flex;
+  position: relative;
+}
+
+.gray {
+  @include caption();
+  color: $gray3;
+}
+
+.name {
+  @include caption(600);
+  color: $dark;
+}
+
+.value {
+  max-width: 350px;
+  word-break: break-word;
+  min-width: auto;
+  padding: 3px 0;
+}

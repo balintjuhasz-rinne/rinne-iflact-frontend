@@ -1,0 +1,91 @@
+@import "../../../..//assets/helpers/mixins";
+
+.rowLink {
+  outline: none;
+  &:hover {
+    .row {
+      background-color: rgba($gray2, 0.2);
+    }
+  }
+
+  &:focus-visible {
+    .row {
+      border: 1px dashed black;
+    }
+  }
+}
+
+.row {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 64px 1.3fr 1.1fr 1.1fr 1.1fr 1fr 1.03fr 0.41fr 0.41fr;
+  transition: background-color $speed;
+  color: $dark;
+  outline: none;
+  cursor: pointer;
+  & > div {
+    &:first-child {
+      margin-left: 16px;
+    }
+    &:last-child {
+      margin-right: 16px;
+    }
+  }
+}
+
+.typeIcon {
+  max-width: 24px;
+  max-height: 20px;
+  margin-right: 8px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+  span {
+    @include cutText();
+    padding-right: 40px;
+  }
+}
+
+.cellLast {
+  display: flex;
+  position: relative;
+}
+
+.warn {
+  height: 13px;
+  width: 13px;
+  min-width: 13px;
+  position: absolute;
+  bottom: -5px;
+  right: 5px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.download {
+  height: 24px;
+  width: 24px;
+  min-width: 24px;
+  opacity: .7;
+  transition: opacity $speed;
+  outline: none;
+  border: none;
+  background: none;
+  &:hover{
+    opacity: 1;
+  }
+  &:focus-visible{
+    @include focus(2px,$dark,4px);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.icons {
+  position: relative;
+}

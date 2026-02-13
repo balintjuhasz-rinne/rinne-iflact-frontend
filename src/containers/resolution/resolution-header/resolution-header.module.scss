@@ -1,0 +1,60 @@
+@import "../../../assets/helpers/mixins";
+
+.wrap {
+  align-items: center;
+}
+
+.backButton {
+  margin-right: 16px;
+  @include iconButton();
+}
+
+.name {
+  @include h5();
+  @include cutText();
+  max-width: 900px;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+.infoBottom {
+  @include bodyTextSm();
+  display: flex;
+}
+
+.infoBottomItem {
+  position: relative;
+  display: inline-block;
+  padding: 0 12px;
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 12px;
+    background-color: $gray2;
+  }
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.button {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}

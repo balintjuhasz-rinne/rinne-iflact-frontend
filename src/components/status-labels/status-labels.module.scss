@@ -1,0 +1,43 @@
+@import "../../assets/helpers/mixins";
+
+.label {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 14px;
+  color: $gray3;
+  padding: 2px 4px;
+  border-radius: 2px;
+  background-color: rgba(120, 128, 144, 0.1);
+  border: 1px solid rgba(120, 128, 144, 0.1);
+  display: inline-block;
+}
+
+.InProgress {
+  color: $green;
+  background-color: rgba(133, 187, 36, 0.16);
+  border: 1px solid rgba(133, 187, 36, 0.1);
+}
+
+.Upcoming {
+  color: $blue;
+  background-color: rgba(17, 48, 131, 0.05);
+  border: 1px solid rgba(17, 48, 131, 0.1);
+}
+
+.Rejected {
+  color: $red;
+  background-color: rgba(148, 18, 18, 0.05);
+  border: 1px solid rgba(131, 17, 17, 0.1);
+}
+
+.Pending {
+  color: $orange;
+  background-color: rgba(255, 163, 0, 0.1);
+  border: 1px solid rgba(255, 163, 0, 0.1);
+}
+
+.Accepted {
+  background-color: rgba($purple-light, 0.1);
+  color: $purple-light;
+  border: 1px solid rgba($purple-light, 0.1);
+}

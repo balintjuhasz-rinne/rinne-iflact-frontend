@@ -1,0 +1,26 @@
+@import "../../../assets/helpers/mixins";
+
+.cosignatoryPanel {
+  width: 260px;
+  min-width: 260px;
+  background-color: #fff;
+}
+
+.info {
+  padding: 16px;
+  border-bottom: 1px solid rgba($gray2, 0.3);
+}
+
+.photo {
+  margin-bottom: 16px;
+}
+
+.phone {
+  @include caption(600);
+  margin-bottom: 12px;
+}
+
+.email {
+  @include link();
+  @include caption(600);
+}

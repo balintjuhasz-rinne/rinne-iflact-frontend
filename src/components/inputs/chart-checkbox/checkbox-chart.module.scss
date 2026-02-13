@@ -1,0 +1,24 @@
+@import '../../../assets/helpers/mixins';
+
+.wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.mark{
+  margin-right: 4px;
+  width: 8px;
+  height: 4px;
+}
+
+.gray {
+  .mark {
+    background-color: #C4C4C4;
+  }
+}
+
+.orange {
+  .mark {
+    background-color: $orange;
+  }
+}

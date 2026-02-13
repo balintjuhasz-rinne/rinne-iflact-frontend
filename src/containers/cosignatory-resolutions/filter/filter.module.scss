@@ -1,0 +1,37 @@
+@import "../../../assets/helpers/mixins";
+
+.filter {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.filterIcon {
+  margin-right: 32px;
+}
+
+.filterInputs {
+  margin-right: 8px;
+  display: flex;
+}
+
+.input {
+  height: 36px;
+}
+
+.filterButtons {
+  display: flex;
+}
+
+.button {
+  height: 36px;
+  text-transform: initial;
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.switcher {
+  margin-left: auto;
+}

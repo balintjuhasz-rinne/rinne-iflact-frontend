@@ -1,0 +1,10 @@
+@import "../../../assets/helpers/mixins";
+
+.resolutionsHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  @include h5();
+}

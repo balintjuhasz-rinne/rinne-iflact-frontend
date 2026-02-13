@@ -1,0 +1,11 @@
+@import "../../../assets/helpers/mixins";
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.label {
+  @include inputLabel();
+}

@@ -1,0 +1,130 @@
+@import "../../assets/helpers/mixins";
+
+$chartHeight: 200px;
+$dateAxisOffset: 22px;
+$todayBlockHeight: 18px;
+$sideOffset: 16px;
+
+.chartWrapper {
+  padding-bottom: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+
+  &.isScrollable {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+.wrapper {
+  position: relative;
+  min-height: $chartHeight;
+  border-bottom: 1px solid rgba($gray2, 0.4);
+}
+
+.dateAxis {
+  position: relative;
+  top: $dateAxisOffset;
+  left: -$sideOffset;
+  width: calc(100% + #{$sideOffset * 2});
+  background-color: rgba($gray2, 0.4);
+  height: 2px;
+}
+
+.axisDate {
+  @include captionSm();
+  position: absolute;
+  top: -$dateAxisOffset;
+  color: $iconsColor;
+  white-space: nowrap;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: $dateAxisOffset;
+    left: 50%;
+    width: 1px;
+    height: calc(#{$chartHeight} - #{$dateAxisOffset});
+    border-left: 1px dashed rgba($gray2, 0.4);
+  }
+
+  &:last-child {
+    transform: translateX(-32px);
+  }
+
+  &.isHidden {
+    visibility: hidden;
+  }
+}
+
+.currentDate {
+  @include captionSm();
+  position: absolute;
+  background-color: #fff;
+  bottom: calc(-#{$todayBlockHeight} - 4px);
+  color: $iconsColor;
+  padding: 2px 4px;
+  border: 1px solid rgba($gray2, 0.3);
+  border-radius: 4px;
+  transform: translateX(-50%);
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: calc(-#{$chartHeight} + #{$todayBlockHeight});
+    left: 50%;
+    width: 1px;
+    height: calc(#{$chartHeight} - #{$dateAxisOffset});
+    border-left: 1px solid rgba($gray2, 0.4);
+  }
+}
+
+.currentDateMark {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: calc(#{$todayBlockHeight} + 3px);
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 4px 7px 4px;
+  border-color: transparent transparent $orange transparent;
+}
+
+.fullProcessLine {
+  position: absolute;
+  height: 8px;
+  top: 60%;
+  transform: translateX(0%);
+  background-color: rgba($gray2, 0.3);
+}
+
+.currentProcessLine {
+  position: absolute;
+  max-width: 100%;
+  height: 4px;
+  top: calc(60% - 6px);
+  background-color: $orange;
+}
+
+.users {
+  display: flex;
+  position: absolute;
+  top: calc(60% - 6px);
+  transform: translateY(-50%) translateX(-50%);
+  &:hover{
+    z-index: 101 !important;
+  }
+}
+
+.avatar {
+  margin-right: 0;
+  position: relative;
+  cursor: default;
+
+  &:not(:first-child) {
+    transform: translateX(-40%);
+  }
+}

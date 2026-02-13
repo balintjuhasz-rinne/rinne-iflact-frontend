@@ -1,0 +1,103 @@
+@import "../../../assets/helpers/mixins";
+
+.input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  &:checked {
+    & + .label:before {
+      background-color: $blue;
+    }
+    & + .label:after {
+      display: block;
+    }
+  }
+  &:disabled {
+    & + label:before {
+      border: 1px solid rgba(147, 169, 188, 0.5);
+      background: rgba(147, 169, 188, 0.2);
+    }
+  }
+  &:not(:checked) + .label {
+    &:after {
+      border-color: transparent;
+    }
+  }
+  &:checked + .label {
+    &:after {
+      border-color: #fff;
+    }
+  }
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  position: relative;
+  cursor: pointer;
+  span {
+    display: inline-block;
+    @include bodyTextSm();
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 3px;
+    margin: auto;
+    left: 8px;
+    width: 5px;
+    height: 11px;
+    border: solid;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  &.alignRight {
+    span {
+      margin-right: 12px;
+      order: -1;
+    }
+    &:after {
+      left: initial;
+      right: 7px;
+    }
+  }
+  &.alignLeft {
+    span {
+      margin-left: 12px;
+    }
+  }
+}
+
+.label:before {
+  content: "";
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid rgba(147, 169, 188, 0.5);
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: background-color $speed;
+}
+
+.gray {
+  .input:checked {
+    & + label:before {
+      background-color: transparent;
+    }
+    & + label:after {
+      border-color: $gray3;
+    }
+    &:focus-visible {
+      & + label {
+        color: $blue;
+      }
+    }
+  }
+}

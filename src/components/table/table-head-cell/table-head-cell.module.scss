@@ -1,0 +1,47 @@
+@import "../../../assets/helpers/mixins";
+.cell {
+  display: flex;
+  white-space: nowrap;
+  &:not(:last-child) {
+    padding-right: 5px;
+  }
+}
+
+.center {
+  justify-content: center;
+}
+.right {
+  justify-content: flex-end;
+}
+
+.cellChild {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: $gray3;
+  @include caption(600);
+
+  &:focus-visible {
+    @include focus(2px, $dark);
+  }
+}
+
+.sortIcons {
+  margin-left: 4px;
+  padding: 3px 5px;
+  display: flex;
+  flex-direction: column;
+  svg {
+    &:last-child {
+      margin-top: 2px;
+      transform: rotate(180deg);
+    }
+    &.active {
+      path {
+        fill: $gray3;
+      }
+    }
+  }
+}

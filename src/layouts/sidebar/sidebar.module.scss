@@ -1,0 +1,34 @@
+@import "../../assets/helpers/mixins.scss";
+
+.root {
+  position: relative;
+  width: $sidebar-width;
+  min-width: $sidebar-width;
+  @include max-vw($xl) {
+    width: $sidebar-width-sm;
+    min-width: $sidebar-width-sm;
+  }
+}
+
+.wrap {
+  height: 100vh;
+  background-color: $blue;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+  @include max-vw($xl) {
+    position: absolute;
+    width: $sidebar-width-sm;
+    min-width: $sidebar-width-sm;
+    z-index: 9;
+  }
+}
+
+@include max-vw($xl) {
+  .on {
+    .wrap {
+      width: $sidebar-width;
+      min-width: $sidebar-width;
+    }
+  }
+}

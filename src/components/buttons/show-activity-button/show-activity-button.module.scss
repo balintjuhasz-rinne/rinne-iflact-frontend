@@ -1,0 +1,16 @@
+@import "../../../assets/helpers/mixins";
+
+.btn {
+  @include bodyTextSm(600);
+  display: flex;
+  align-items: center;
+  color: $blue;
+  background: none;
+  border: none;
+  outline: none;
+  margin-left: auto;
+}
+
+.img {
+  margin-right: 10px;
+}

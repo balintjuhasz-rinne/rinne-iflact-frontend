@@ -1,0 +1,68 @@
+@import "../../assets/helpers/mixins";
+
+.loaderWrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin-left: $sidebar-width;
+  padding-right: $sidebar-width;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background-color: rgba(#fff, 0.9);
+}
+
+.round {
+  border-radius: 10px;
+}
+
+.loadingText {
+  margin-bottom: 12px;
+  @include bodyText();
+  color: $gray3;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loaderEl {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 4px;
+
+  @for $i from 1 to 4 {
+    &:nth-of-type(#{$i}) span {
+      animation-delay: $i * 0.25s;
+    }
+  }
+
+  span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: $blue;
+    animation: pulse 1s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

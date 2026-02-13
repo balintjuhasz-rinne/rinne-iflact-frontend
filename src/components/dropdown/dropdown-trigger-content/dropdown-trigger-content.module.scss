@@ -1,0 +1,27 @@
+@import "../../../assets/helpers/mixins.scss";
+
+.search {
+  @include bodyTextSm();
+  padding: 8px 12px;
+  height: 100%;
+  width: 100%;
+  font-family: $primary-font;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  &.placeholderShown {
+    color: rgba($dark, 0.5);
+  }
+  @include placeholder() {
+    color: rgba($dark, 0.5);
+  }
+}
+
+.text {
+  @include bodyTextSm();
+  pointer-events: none;
+  padding-right: 8px;
+  max-width: calc(100% - 30px);
+  display: block;
+  @include cutText();
+}

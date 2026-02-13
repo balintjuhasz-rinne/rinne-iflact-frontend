@@ -1,0 +1,18 @@
+@import "../../../assets/helpers/mixins";
+
+.backButton {
+  margin-right: 16px;
+  @include iconButton();
+}
+
+.title {
+  @include h5();
+}
+
+.buttons {
+  margin-left: auto;
+  display: flex;
+  > *:not(:last-child) {
+    margin-right: 8px;
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../../assets/helpers/mixins";
+
+.modal {
+  text-align: left;
+  h5 {
+    @include h5();
+    margin-bottom: 10px;
+  }
+}

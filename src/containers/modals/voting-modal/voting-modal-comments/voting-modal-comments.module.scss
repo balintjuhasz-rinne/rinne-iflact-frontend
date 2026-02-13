@@ -1,0 +1,123 @@
+@import "../../../../assets/helpers/mixins";
+
+.wrap {
+  position: fixed;
+  right: 16px;
+  top: $header-height;
+  bottom: 0;
+  width: $sidebar-width-lg;
+  background-color: #fff;
+  padding: 20px 24px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  @include subtitle();
+  color: $dark;
+}
+
+.close {
+  @include iconButton();
+  &:focus-visible {
+    &:after {
+      border: 1px dashed #fff;
+    }
+  }
+}
+
+.comments{
+  margin-top: 16px;
+}
+
+.comment {
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba($gray2, .3);
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+.time {
+  @include captionSm();
+  color: $gray3;
+  &:after {
+    content: '•';
+    margin: 0 4px;
+  }
+}
+
+.name {
+  @include captionSm();
+  color: $dark;
+}
+
+.middle {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 6px;
+  margin-top: 8px;
+  align-items: flex-start;
+}
+
+.text {
+  @include caption();
+  color: $dark;
+  word-break: break-word;
+}
+
+.dots {
+  border: none;
+  outline: none;
+  font-size: 0;
+  background: none;
+}
+
+.form {
+  margin-top: 16px;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  margin-right: 8px;
+}
+
+.actions {
+  position: relative;
+}
+
+.dropdown {
+  background: #FFFFFF;
+  border: 1px solid rgba(147, 169, 188, 0.5);
+  box-shadow: 0px 4px 8px rgba(120, 128, 144, 0.16);
+  border-radius: 5px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+}
+
+.button {
+  @include captionSm();
+  color: $dark;
+  border: none;
+  outline: none;
+  display: inline-block;
+  white-space: nowrap;
+  background-color: #fff;
+  height: 32px;
+  text-align: left;
+  padding: 0 8px;
+  &:hover {
+    background-color: $gray1;
+  }
+}

@@ -1,0 +1,38 @@
+$primary-font: "inter";
+$speed: 0.3s;
+
+//colors
+$dark: #1d2b46;
+$iconsColor: #93a9bc;
+$gray3: #788090;
+$gray2: #b0b5bf;
+$gray1: #f7f8fa;
+$blue: #113083;
+$light-blue: #43aaff;
+$green: #85bb24;
+$red: #ff5d38;
+$orange: #ffa300;
+$purple-light: #9aaee5;
+
+//shadows
+$shadow-big: 0px 24px 32px rgba(120, 128, 144, 0.12);
+$shadow-middle: 0px 4px 8px rgba(120, 128, 144, 0.16);
+$shadow-small: 0px 1px 2px rgba(120, 128, 144, 0.16);
+
+$sidebar-width: 236px;
+$sidebar-width-lg: 354px;
+$sidebar-width-sm: 56px;
+$header-height: 64px;
+$switcher-height: 32px;
+$filter-height: 84px;
+$dashboard-vertical-padding: 16px;
+$scrollbar-width: 18px;
+$resolution-document-width: 858px;
+
+// Adaptive
+
+$xxl: 1920px;
+$xl: 1440px;
+$lg: 1000px;
+$md: 768px;
+$xs: 320px;

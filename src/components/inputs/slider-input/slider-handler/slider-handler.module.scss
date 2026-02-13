@@ -1,0 +1,24 @@
+@import "../../../../assets/helpers/mixins.scss";
+
+.wrap {
+  width: 100%;
+  position: relative;
+}
+
+.handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  z-index: 3;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #ffa300;
+  top: -4px;
+}
+
+.value {
+  @include caption();
+  transform: translate(-4px, -22px);
+  color: rgba($dark, 0.5);
+  display: block;
+}

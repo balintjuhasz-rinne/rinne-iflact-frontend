@@ -1,0 +1,77 @@
+@import "../../../assets/helpers/mixins.scss";
+
+.root {
+  padding: 34px 24px 42px;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.avatar {
+  @include caption(600);
+  height: 28px;
+  width: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  background-color: $purple-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.panel {
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  color: #fff;
+  @include subtitle();
+}
+
+.action {
+  @include caption();
+  color: rgba(#fff, 0.7);
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  display: inline-flex;
+  align-self: flex-start;
+  transition: color $speed;
+  outline: none;
+  &:hover:not(:active) {
+    color: rgba(#fff, 0.9);
+  }
+  &:active {
+    color: rgba(#fff, 0.5);
+  }
+  &:focus-visible {
+    @include focus(2px);
+  }
+}
+
+@include max-vw($xl) {
+  .root {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .panel {
+    display: none;
+  }
+  .on {
+    .panel {
+      display: flex;
+    }
+  }
+}

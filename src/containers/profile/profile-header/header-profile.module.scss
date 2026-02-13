@@ -1,0 +1,12 @@
+@import "../../../assets/helpers/mixins.scss";
+
+.title {
+  @include h5();
+  margin-left: 16px;
+}
+
+.wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}

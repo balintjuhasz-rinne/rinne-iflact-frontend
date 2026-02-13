@@ -1,0 +1,90 @@
+@import "../../../../assets/helpers/mixins";
+
+.header {
+  position: fixed;
+  z-index: 102;
+  width: 100vw;
+  right: 16px;
+  padding: 0 24px;
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  background-color: $blue;
+  box-shadow: 0px 1px 2px rgba(120, 128, 144, 0.16);
+  color: #fff;
+  .button {
+    display: flex;
+    justify-content: center;
+    width: 147px;
+    &:focus-visible {
+      &:after {
+        border: 1px dashed #fff;
+      }
+    }
+  
+    &:hover:not(:active) {
+      background-color: $gray1;
+    }
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
+
+.headerWrap {
+  width: $resolution-document-width;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: 130px;
+  button{  
+    margin-left: 20px;
+    margin-right: 20px; 
+  }
+}
+
+.buttonText {
+  @include bodyText(500);
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: opacity $speed;
+  &:hover:not(:active) {
+    opacity: 0.9;
+  }
+  &:active {
+    opacity: 0.7;
+  }
+  &:focus-visible {
+    @include focus(0, #fff, 2px);
+  }
+}
+
+.buttons {
+  display: flex;
+  margin-left: auto;
+}
+
+.close {
+  @include iconButton();
+  &:focus-visible {
+    &:after {
+      border: 1px dashed #fff;
+    }
+  }
+}
+
+.add {
+  @include subtitle();
+  color: #fff;
+  border: none;
+  background: none;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 278px;
+  img {
+    margin-right: 12px;
+  }
+}

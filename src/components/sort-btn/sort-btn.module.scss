@@ -1,0 +1,14 @@
+@import "../../assets/helpers/mixins.scss";
+
+.wrap {
+  @include caption(600);
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+  background-color: transparent;
+  color: $blue;
+  outline: none;
+  &:focus-visible {
+    @include focus(0, $dark);
+  }
+}

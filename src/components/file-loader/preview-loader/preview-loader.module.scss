@@ -1,0 +1,45 @@
+@import "../../../assets/helpers/mixins";
+
+.wrap {
+  width: 50%;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.remove {
+  @include iconButton();
+  margin-bottom: auto;
+  margin-left: 12px;
+  img {
+    width: 20px;
+  }
+}
+
+.hint {
+  @include bodyTextSm();
+  color: $gray3;
+}
+
+.row {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  @include bodyTextSm(700);
+}
+
+.info {
+  margin-left: 8px;
+}
+
+.size {
+  @include caption();
+  color: $gray3;
+  margin-top: 4px;
+}
+
+.pdf {
+  width: 40px;
+}

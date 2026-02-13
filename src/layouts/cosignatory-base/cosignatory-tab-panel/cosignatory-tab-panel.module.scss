@@ -1,0 +1,22 @@
+@import "../../../assets/helpers/mixins";
+
+.wrap {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.registered {
+  @include caption();
+  color: $gray3;
+}
+
+.registeredText {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.registeredDate {
+  font-weight: 600;
+}

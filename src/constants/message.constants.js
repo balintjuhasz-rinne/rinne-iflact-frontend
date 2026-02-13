@@ -1,0 +1,19 @@
+export const MESSAGE_TYPES = {
+  REMINDER: 'Reminder',
+  NEW_APPROVAL_REQUEST: 'New Approval Request',
+  DOCUMENT_APPROVED: 'Document approved',
+  DOCUMENT_REJECTED: 'Document rejected',
+  DOCUMENT_CANCELLED: 'Document cancelled',
+};
+
+export const MESSAGE_TYPES_BACKEND = {
+  REMINDER: 'REMINDER',
+  NEW_APPROVAL_REQUEST: 'NEW_APPROVAL_REQUEST',
+  DOCUMENT_APPROVED: 'DOCUMENT_APPROVED',
+  DOCUMENT_REJECTED: 'DOCUMENT_REJECTED',
+};
+
+export const MESSAGE_DELIVERY = {
+  EMAIL: 'email',
+  SMS: 'sms',
+};

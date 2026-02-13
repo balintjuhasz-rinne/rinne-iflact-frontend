@@ -1,0 +1,6 @@
+@import "../../assets/helpers/mixins";
+
+.name {
+  @include caption(600);
+  color: $dark;
+}

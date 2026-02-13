@@ -1,0 +1,36 @@
+@import '../../assets/helpers/mixins';
+
+.resolutionWrap {
+  display: flex;
+}
+
+.dashboardWrap {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-column-gap: 16px;
+}
+
+.description {
+  @include bodyTextSm();
+  margin-bottom: 32px;
+  .bold {
+    font-weight: bold;
+  }
+}
+
+.descriptionText {
+  white-space: pre-line;
+}
+
+.rightPanel {
+  min-width: 354px;
+  width: 354px;
+  max-height: calc(100vh - #{$header-height});
+  overflow-y: auto;
+}
+
+.activities {
+  width: 100%;
+  min-width: initial;
+  max-height: initial;
+}

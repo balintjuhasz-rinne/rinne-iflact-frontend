@@ -1,0 +1,32 @@
+@import "../../assets/helpers/mixins";
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid rgba(176, 181, 191, 0.3);
+  outline: none;
+  transition: box-shadow $speed;
+  &:focus{
+    @include focus(8px,$dark)
+  }
+  &:hover{
+    box-shadow: $shadow-middle;
+  }
+}
+
+.title {
+  @include h4();
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  @include caption();
+  display: inline-block;
+  margin-bottom: 4px;
+}
+

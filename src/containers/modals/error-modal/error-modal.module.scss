@@ -1,0 +1,13 @@
+@import "../../../assets/helpers/mixins";
+
+.wrapOverlay {
+  z-index: 1002;
+}
+
+.wrap {
+  position: relative;
+  max-width: 422px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

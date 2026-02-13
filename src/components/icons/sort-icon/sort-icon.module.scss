@@ -1,0 +1,11 @@
+@import "../../../assets/helpers/mixins.scss";
+
+.icon {
+  @include icon();
+  transform: rotate(180deg);
+}
+
+.iconActive {
+  @include icon();
+  transform: rotate(0);
+}

@@ -1,0 +1,94 @@
+@import "../../assets/helpers/mixins.scss";
+
+.wrap {
+  width: 100%;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  &:not(:last-child) {
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba($gray2, 0.4);
+  }
+  & + .item {
+    margin-top: 8px;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+.name {
+  @include caption(600);
+  display: flex;
+  color: $dark;
+  word-break: break-all;
+}
+.position {
+  @include caption(500);
+  color: $gray3;
+  display: flex;
+  align-items: center;
+}
+.voting {
+  margin-left: 4px;
+  display: flex;
+  align-items: center;
+  &:before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: $iconsColor;
+    margin-right: 4px;
+  }
+}
+.title {
+  @include subtitle();
+}
+
+.invite {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  @include caption(600);
+  color: $blue;
+}
+
+.list {
+  margin-top: 10px;
+  @include bodyTextSm();
+  color: $gray3;
+}
+
+.trigger {
+  @include caption();
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  border: none;
+  background: none;
+  outline: none;
+  color: $dark;
+  width: 100%;
+  text-align: left;
+}
+
+.count {
+  @include caption();
+  display: inline-block;
+  font-weight: 600;
+  color: $gray3;
+  margin-left: 4px;
+}

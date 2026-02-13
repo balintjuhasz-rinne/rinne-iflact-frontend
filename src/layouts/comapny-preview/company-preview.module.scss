@@ -1,0 +1,112 @@
+@import "../../assets/helpers/mixins.scss";
+
+.label {
+  @include subtitle();
+}
+
+.link {
+  @include caption(600);
+  color: $blue;
+  background-color: transparent;
+  border: 0;
+}
+
+.logo {
+  display: flex;
+  height: 64px;
+  min-height: 64px;
+  width: 64px;
+  object-fit: cover;
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.dropdowncontent {
+  padding: 12px 10px 16px;
+  border-bottom: 1px solid rgba($gray2, 0.3);
+}
+
+.content {
+  background-color: #fff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  width: 100%;
+  padding: 16px 24px;
+  min-height: calc(100vh - 138px);
+  box-shadow: 0px 24px 32px rgba(120, 128, 144, 0.12);
+  max-width: 880px;
+}
+
+.trigger {
+  background: none;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba($gray2, 0.3);
+  outline: none;
+  text-align: left;
+  padding: 8px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  @include subtitleSm();
+  font-weight: bold;
+  color: $dark;
+}
+
+.abilities {
+  @include caption();
+  color: $dark;
+}
+
+.middle {
+  align-self: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  .item + .item {
+    margin-top: 0;
+  }
+}
+
+.item {
+  max-width: 624px;
+}
+
+.item + .grid,
+.grid + .item,
+.item + .item,
+.grid + .grid {
+  margin-top: 24px;
+}
+
+.key {
+  @include overline();
+  color: $gray3;
+}
+
+.val {
+  @include subtitle(500);
+  margin-top: 4px;
+}
+
+a.val {
+  color: $blue;
+}
+
+.text {
+  @include subtitleSm();
+  margin-top: 4px;
+  word-break: break-word;
+}

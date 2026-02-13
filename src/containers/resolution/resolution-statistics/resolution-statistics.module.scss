@@ -1,0 +1,54 @@
+@import "../../../assets/helpers/mixins";
+
+.title {
+  @include subtitle();
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  @include bodyTextSm();
+}
+
+.statisticsHeader {
+  margin-bottom: 12px;
+}
+
+.statisticsBlocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 6px;
+}
+
+.ic {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.link {
+  @include subtitleSm();
+  color: $blue;
+  line-height: 24px;
+}
+
+.headerWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textBlock {
+  margin-top: 24px;
+}
+
+.key {
+  @include overline();
+  font-size: 11px;
+  color: $gray3;
+}
+
+.text {
+  @include subtitleSm();
+  margin-top: 4px;
+  word-break: break-word;
+}

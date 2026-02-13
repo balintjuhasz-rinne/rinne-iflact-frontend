@@ -1,0 +1,109 @@
+@import "../../assets/helpers/mixins.scss";
+
+.dropdown {
+  display: block;
+  position: relative;
+  width: 100%;
+  @include bodyText();
+}
+
+.label {
+  @include inputLabel();
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  cursor: default;
+}
+
+.trigger {
+  @include bodyText();
+  background-color: #fff;
+  width: 100%;
+  height: 40px;
+  padding: 6px 12px;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $dark;
+  border: 0;
+  transition: color $speed;
+  z-index: 4;
+  border: 1px solid rgba(147, 169, 188, 0.5);
+  border-radius: 4px;
+  outline: none;
+  transition: background-color $speed, color $speed, border $speed;
+  &.placeholderShown,
+  &.multiplePlaceholderShown {
+    > span {
+      opacity: 0.5;
+    }
+  }
+  &.isSearchable {
+    padding: 0 4px 0 0;
+  }
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &:active {
+    color: rgba($dark, 0.7);
+    path {
+      stroke: gba($gray1, 0.7);
+    }
+  }
+
+  &:focus,
+  &:focus-within {
+    border: 1px solid #93a9bc;
+  }
+
+  &[disabled] {
+    background: rgba(147, 169, 188, 0.2);
+    border: 1px solid rgba(147, 169, 188, 0.5);
+    pointer-events: none;
+  }
+}
+
+.delete {
+  width: 24px;
+  height: 24px;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.icon {
+  margin: 1px 0 -1px 0;
+  transition: opacity $speed;
+}
+
+.fluid {
+  width: 100%;
+  .trigger {
+    width: 100%;
+  }
+  .icon {
+    margin: 1px 0 -1px auto;
+  }
+}
+
+.open.attached {
+  .trigger {
+    border-radius: 4px 4px 0 0;
+  }
+}
+
+.errorHint {
+  @include caption();
+  position: absolute;
+  top: 100%;
+  right: 0;
+  color: $red;
+}
+
+.error {
+  .trigger {
+    border: 1px solid $red;
+  }
+}

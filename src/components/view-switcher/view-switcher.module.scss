@@ -1,0 +1,28 @@
+@import "../../assets/helpers/mixins.scss";
+
+.switcher {
+  display: flex;
+  border: 1px solid rgba(176, 181, 191, 0.4);
+  border-radius: 3px;
+}
+
+.btn {
+  @include caption(600);
+  display: inline-flex;
+  align-items: center;
+  color: $dark;
+  padding: 8px;
+  background: rgba(176, 181, 191, 0.2);
+  border: none;
+  outline: none;
+  &:not(:last-child) { 
+   border-right: 1px solid rgba(176, 181, 191, 0.4); 
+  }
+  &.active {
+    background-color: #fff;
+  }
+}
+
+.img {
+  margin-right: 6px;
+}

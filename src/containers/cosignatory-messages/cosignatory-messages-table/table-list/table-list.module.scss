@@ -1,0 +1,31 @@
+@import "../../../../assets/helpers/mixins.scss";
+
+.tableRow {
+  padding: 10px 24px 10px 16px;
+  display: grid;
+  grid-template-columns: 0.6fr 2.02fr 0.3fr 0.79fr 0.29fr;
+}
+
+.cell {
+  line-height: 20px;
+}
+
+.gray {
+  color: $gray3;
+}
+
+.textLg {
+  @include bodyTextSm();
+  a {
+    @include link();
+    @include bodyTextSm();
+  }
+}
+
+.actionButton {
+  @include link();
+  @include caption(600);
+  background-color: transparent;
+  border: none;
+  outline: none;
+}

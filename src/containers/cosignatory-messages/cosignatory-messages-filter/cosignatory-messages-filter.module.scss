@@ -1,0 +1,42 @@
+@import "../../../assets/helpers/mixins";
+
+.filter {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.filterIcon {
+  margin-right: 32px;
+}
+
+.filterInputs {
+  margin-right: 8px;
+  display: flex;
+}
+
+.dropdown {
+  min-width: 220px;
+  width: 220px;
+  > button {
+    height: 36px;
+  }
+}
+
+.dateWrap {
+  min-width: 220px;
+  width: 220px;
+  margin-right: 8px;
+}
+
+.filterButtons {
+  display: flex;
+}
+
+.button {
+  height: 36px;
+  text-transform: initial;
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}

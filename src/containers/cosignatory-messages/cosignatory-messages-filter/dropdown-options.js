@@ -1,0 +1,22 @@
+import { MESSAGE_TYPES, MESSAGE_TYPES_BACKEND } from '../../../constants/message.constants';
+
+const options = [
+  {
+    title: MESSAGE_TYPES.REMINDER,
+    id: MESSAGE_TYPES_BACKEND.REMINDER,
+  },
+  {
+    title: MESSAGE_TYPES.NEW_APPROVAL_REQUEST,
+    id: MESSAGE_TYPES_BACKEND.NEW_APPROVAL_REQUEST,
+  },
+  {
+    title: MESSAGE_TYPES.DOCUMENT_APPROVED,
+    id: MESSAGE_TYPES_BACKEND.DOCUMENT_APPROVED,
+  },
+  {
+    title: MESSAGE_TYPES.DOCUMENT_REJECTED,
+    id: MESSAGE_TYPES_BACKEND.DOCUMENT_REJECTED,
+  },
+];
+
+export default options;

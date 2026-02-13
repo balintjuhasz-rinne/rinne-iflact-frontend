@@ -1,0 +1,81 @@
+@import "../../../assets/helpers/mixins.scss";
+
+.field {
+  display: flex;
+  align-items: center;
+}
+.wrap {
+  height: 22px;
+  width: 32px;
+  border-radius: 32px;
+  position: relative;
+  border: 0;
+  padding: 0;
+  display: block;
+  cursor: pointer;
+  input {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  input:checked + .layout {
+    background-color: $green;
+    & + .slider {
+      left: calc(100% - 21px);
+    }
+  }
+
+  input:not(:active):focus-visible + .layout {
+    &:before {
+      border: 1px dashed $dark;
+    }
+  }
+}
+
+.slider {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: block;
+  border: 1px solid rgba(147, 169, 188, 0.5);
+  transition: left $speed;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.layout {
+  background-color: $gray2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 32px;
+  z-index: 1;
+  display: block;
+  pointer-events: none;
+  transition: background-color $speed;
+  &:before {
+    content: "";
+    border: 1px dashed transparent;
+    border-radius: 32px;
+    position: absolute;
+    top: -4px;
+    bottom: -4px;
+    left: -4px;
+    right: -4px;
+    transition: border-color $speed;
+  }
+}
+
+.label {
+  outline: none;
+  background-color: transparent;
+  border: 0;
+  @include bodyTextSm();
+  margin-left: 12px;
+}

@@ -1,0 +1,12 @@
+@import "../../../assets/helpers/mixins.scss";
+
+.logo {
+  padding: 20px 24px 0;
+  img {
+    width: 108px;
+    height: 24px;
+  }
+  @include max-vw($xl) {
+    display: none;
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../../assets/helpers/mixins.scss";
+
+.wrap {
+  display: flex;
+}
+.dashboard {
+  @include dashboardWrap();
+  padding-bottom: 0;
+}

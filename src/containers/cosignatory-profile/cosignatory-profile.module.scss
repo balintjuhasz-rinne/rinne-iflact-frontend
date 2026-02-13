@@ -1,0 +1,167 @@
+@import "../../assets/helpers/mixins";
+
+$fieldName-width: 233px;
+$min-field-heigh: 24px;
+
+.cosignatoryProfileWrap {
+  position: relative;
+  min-height: calc(100% - 56px);
+  padding: 16px 24px;
+  background-color: #fff;
+}
+
+.cosignatoryProfile {
+  max-width: 693px;
+}
+
+.block {
+  margin-bottom: 24px;
+}
+
+.title {
+  @include subtitle();
+  width: $fieldName-width;
+  min-width: $fieldName-width;
+  margin-bottom: 8px;
+  &.isEditing {
+    margin-bottom: 16px;
+  }
+}
+
+.field {
+  min-height: $min-field-heigh;
+  display: flex;
+  align-items: center;
+  &:not(:last-child) {
+    margin-bottom: 0px;
+    &.isEditing {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.inactivateButton {
+  @include link();
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-left: 12px;
+}
+
+.fieldVetoPower {
+  padding: 8px 0;
+  &.isEditing {
+    padding-top: 0;
+  }
+}
+
+.fieldName {
+  width: $fieldName-width;
+  min-width: $fieldName-width;
+  @include bodyTextSm();
+  color: $gray3;
+}
+
+.fieldValue {
+  width: calc(100% - #{$fieldName-width});
+}
+
+.fieldInput {
+  transition: border 0s;
+  &:disabled {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: $dark;
+  }
+  &.isNotEditable {
+    background: rgba(147, 169, 188, 0.2);
+    border: 1px solid rgba(147, 169, 188, 0.5);
+  }
+}
+
+.fieldDropdown {
+  div {
+    &[disabled] {
+      background-color: #fff;
+      border: 1px solid #fff;
+      color: $dark;
+      img {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 32px;
+}
+.button {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.vetoPowerField {
+  padding-left: 12px;
+}
+
+.formErrors {
+  margin-top: 8px;
+}
+
+.formErrors {
+  @include caption();
+  color: $red;
+}
+
+.formErrorsField {
+  text-transform: capitalize;
+}
+
+.unvisible {
+  display: none;
+}
+
+.textarea {
+  @include bodyText();
+  font-family: 'Inter';
+  padding: 0 70px 4px 0;
+  max-height: none;
+  border: none;
+  outline: none;
+  resize: none;
+  width: 338px;
+  &:focus {
+    border: none;
+    border-bottom: 1px solid $gray2;
+    & ~ .controls {
+      opacity: 1;
+    }
+  }
+}
+
+.comment {
+  position: relative;
+  width: 338px;
+}
+
+.controls {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  bottom: 4px;
+}
+
+.btn {
+  border: none;
+  background: none;
+  &:first-child {
+    margin-right: 12px;
+  }
+}
+
+.err {
+  display: block;
+}

@@ -1,0 +1,35 @@
+@import "../../../assets/helpers/mixins";
+
+.wrap {
+  width: 100%;
+  position: relative;
+}
+
+.label {
+  @include inputLabel();
+}
+
+.input {
+  @include primaryInput();
+  background-position: right 12px center;
+  height: 40px;
+}
+
+.error {
+  padding: 8px 36px 8px 12px;
+  border: 1px solid $red;
+  background-image: url("../../../../public/images/icons/error.svg");
+}
+
+.success {
+  padding: 8px 36px 8px 12px;
+  background-image: url("../../../../public/images/icons/success.svg");
+}
+
+.inputError {
+  @include caption();
+  position: absolute;
+  top: 100%;
+  right: 0;
+  color: $red;
+}

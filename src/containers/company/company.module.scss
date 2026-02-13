@@ -1,0 +1,36 @@
+@import "../../assets/helpers/mixins.scss";
+
+.outerWrap {
+  display: flex;
+}
+
+.wrap {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-column-gap: 16px;
+}
+
+.companyCosignatories {
+  padding-top: 16px;
+}
+
+.dashboard {
+  padding-bottom: 0;
+}
+
+.activity {
+  @include max-vw($xl) {
+    display: none;
+    &.on {
+      @include activityOn();
+    }
+  }
+}
+
+.activityTrigger {
+  display: none;
+  @include max-vw($xl) {
+    display: flex;
+  }
+}

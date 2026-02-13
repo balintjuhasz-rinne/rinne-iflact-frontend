@@ -1,0 +1,88 @@
+@import "../../assets/helpers/mixins.scss";
+
+.wrap {
+  max-height: calc(100vh - #{$header-height});
+  background-color: #fff;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  overflow-y: auto;
+
+  width: 400px;
+  min-width: 400px;
+  padding-left: 32px;
+  padding-right: 32px;
+  @include max-vw($xxl) {
+    min-width: 354px;
+    width: 354px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.title {
+  @include bodyText(700);
+  color: $dark;
+}
+
+.list {
+  margin-top: 16px;
+}
+
+.item {
+  &:not(:last-child) {
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba($gray2, 0.2);
+  }
+  & + .item {
+    margin-top: 12px;
+  }
+}
+
+.head {
+  @include captionSm();
+  display: flex;
+  align-items: center;
+}
+
+.date {
+  color: $gray3;
+}
+
+.resolution {
+  @include link();
+  @include captionSm();
+  margin-left: 4px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  color: $dark;
+  margin-top: 8px;
+}
+
+.name {
+  @include caption(700);
+  display: flex;
+}
+
+.action {
+  @include caption();
+  margin-left: 4px;
+}
+
+.avatar {
+  margin-right: 4px;
+}
+
+.emptyListMessage {
+  @include caption();
+  color: $gray3;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
